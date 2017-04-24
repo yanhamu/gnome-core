@@ -90,9 +90,7 @@ namespace Gnome.Web.AuthMiddleware
         {
             // DON'T do this in production, obviously!
             if (username == "test" && password == "test")
-            {
                 return Task.FromResult(new ClaimsIdentity(new System.Security.Principal.GenericIdentity(username, "Token"), new Claim[] { }));
-            }
 
             // Credentials are invalid, or account doesn't exist
             return Task.FromResult<ClaimsIdentity>(null);
