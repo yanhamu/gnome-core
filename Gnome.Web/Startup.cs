@@ -2,6 +2,8 @@ using Gnome.DataAccess;
 using Gnome.Web.AuthMiddleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,11 +31,24 @@ namespace gnome_core
 
         public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddDbContext<GnomeDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services
+                .AddIdentity<ApplicationUser, IdentityRole>(opt =>
+                {
+                    opt.Password.RequireDigit = false;
+                    opt.Password.RequiredLength = 3;
+                    opt.Password.RequireLowercase = false;
+                    opt.Password.RequireNonAlphanumeric = false;
+                    opt.Password.RequireUppercase = false;
+                })
+                .AddEntityFrameworkStores<GnomeDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddScoped<UserManager<ApplicationUser>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,8 +56,6 @@ namespace gnome_core
         {
             var secretKey = "mysupersecret_secretkey!123";
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
-
-
 
             var tokenValidationParameters = new TokenValidationParameters
             {
