@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gnome.Web", "Gnome.Web\Gnome.Web.csproj", "{3F8023BB-C289-4C26-9BC3-38C0A2CBDE53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.DataAccess", "Gnome.DataAccess\Gnome.DataAccess.csproj", "{94FD6B8F-21D3-4301-A733-FFDD5CFADE8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3F8023BB-C289-4C26-9BC3-38C0A2CBDE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8023BB-C289-4C26-9BC3-38C0A2CBDE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8023BB-C289-4C26-9BC3-38C0A2CBDE53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FD6B8F-21D3-4301-A733-FFDD5CFADE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FD6B8F-21D3-4301-A733-FFDD5CFADE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FD6B8F-21D3-4301-A733-FFDD5CFADE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FD6B8F-21D3-4301-A733-FFDD5CFADE8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
