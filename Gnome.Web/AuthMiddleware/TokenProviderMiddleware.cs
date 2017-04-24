@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Gnome.DataAccess;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System;
@@ -21,7 +23,7 @@ namespace Gnome.Web.AuthMiddleware
             _options = options.Value;
         }
 
-        public Task Invoke(HttpContext context)
+        public Task Invoke(HttpContext context, UserManager<ApplicationUser> userManager)
         {
             // If the request path doesn't match, skip
             if (!context.Request.Path.Equals(_options.Path, StringComparison.Ordinal))
@@ -37,15 +39,15 @@ namespace Gnome.Web.AuthMiddleware
                 return context.Response.WriteAsync("Bad request.");
             }
 
-            return GenerateToken(context);
+            return GenerateToken(context, userManager);
         }
 
-        private async Task GenerateToken(HttpContext context)
+        private async Task GenerateToken(HttpContext context, UserManager<ApplicationUser> userManager)
         {
             var username = context.Request.Form["username"];
             var password = context.Request.Form["password"];
 
-            var identity = await GetIdentity(username, password);
+            var identity = await GetIdentity(username, password, userManager);
             if (identity == null)
             {
                 context.Response.StatusCode = 400;
@@ -86,14 +88,17 @@ namespace Gnome.Web.AuthMiddleware
             await context.Response.WriteAsync(JsonConvert.SerializeObject(response, new JsonSerializerSettings { Formatting = Formatting.Indented }));
         }
 
-        private Task<ClaimsIdentity> GetIdentity(string username, string password)
+        private async Task<ClaimsIdentity> GetIdentity(string username, string password, UserManager<ApplicationUser> userManager)
         {
-            // DON'T do this in production, obviously!
-            if (username == "test" && password == "test")
-                return Task.FromResult(new ClaimsIdentity(new System.Security.Principal.GenericIdentity(username, "Token"), new Claim[] { }));
+            var user = await userManager.FindByNameAsync(username);
+            if (user == null)
+                return null;
 
-            // Credentials are invalid, or account doesn't exist
-            return Task.FromResult<ClaimsIdentity>(null);
+            var passwordIsCorrect = await userManager.CheckPasswordAsync(user, password);
+            if (passwordIsCorrect)
+                return new ClaimsIdentity(new System.Security.Principal.GenericIdentity(username, "Token"), new Claim[] { });
+
+            return null;
         }
     }
 }

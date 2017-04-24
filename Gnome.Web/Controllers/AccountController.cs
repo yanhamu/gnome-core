@@ -22,10 +22,6 @@ namespace Gnome.Web.Controllers
         [HttpGet()]
         public IActionResult Get()
         {
-            var x = context.Accounts.ToList();
-
-            var user = this.HttpContext.User;
-
             return new OkObjectResult(new { data = "random data" + x.Count.ToString() });
         }
     }
