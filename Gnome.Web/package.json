@@ -45,7 +45,8 @@
     "webpack": "^2.2.0",
     "webpack-hot-middleware": "^2.12.2",
     "webpack-merge": "^0.14.1",
-    "zone.js": "^0.7.6"
+    "zone.js": "^0.7.6",
+    "ng2-tree": "^2.0.0-alpha.5"
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",

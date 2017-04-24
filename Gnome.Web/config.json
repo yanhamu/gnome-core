@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "DefaultConnection": "Server=.;Database=gnome-core;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=.\\sqlexpress;Database=gnome-core;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
