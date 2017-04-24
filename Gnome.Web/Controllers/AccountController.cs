@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace Gnome.Web.Controllers
 {
@@ -13,16 +12,15 @@ namespace Gnome.Web.Controllers
         private readonly GnomeDbContext context;
         private readonly UserManager<ApplicationUser> usermanager;
 
-        public AccountController(GnomeDbContext context, UserManager<ApplicationUser> usermanager)
+        public AccountController(GnomeDbContext context)
         {
             this.context = context;
-            this.usermanager = usermanager;
         }
 
         [HttpGet()]
         public IActionResult Get()
         {
-            return new OkObjectResult(new { data = "random data" + x.Count.ToString() });
+            return new OkObjectResult(new { data = "random data" });
         }
     }
 }
