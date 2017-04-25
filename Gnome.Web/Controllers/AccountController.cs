@@ -2,6 +2,7 @@
 using Gnome.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Gnome.Web.Controllers
 {
@@ -22,7 +23,9 @@ namespace Gnome.Web.Controllers
         [HttpGet()]
         public IActionResult Get()
         {
-            return new OkObjectResult(new { data = "random data" + service.GetRandom().ToString() });
+            var count = context.Accounts.ToList().Count;
+
+            return new OkObjectResult(new { data = count.ToString() + "random data" + service.GetRandom().ToString() });
         }
     }
 }
