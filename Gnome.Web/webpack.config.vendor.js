@@ -32,7 +32,8 @@ module.exports = (env) => {
                 'es6-promise',
                 'event-source-polyfill',
                 'jquery',
-                'zone.js',
+                'ng2-tree/styles.css',
+                'zone.js'
             ]
         },
         output: {
