@@ -1,5 +1,7 @@
+using Autofac;
 using Gnome.DataAccess;
 using Gnome.Web.AuthMiddleware;
+using Gnome.Web.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -31,7 +33,7 @@ namespace gnome_core
 
         public IConfigurationRoot Configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddDbContext<GnomeDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -49,6 +51,9 @@ namespace gnome_core
                 .AddDefaultTokenProviders();
 
             services.AddScoped<UserManager<ApplicationUser>>();
+
+            var container = DIConfiguration.CreateContainer(services, Configuration);
+            return container.Resolve<IServiceProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
