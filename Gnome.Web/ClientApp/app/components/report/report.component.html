@@ -1,0 +1,13 @@
+﻿<h3>reports</h3>
+
+<div>
+    <div style="display: block">
+        <canvas baseChart class="chart"
+                   [data]="doughnutChartData"
+                   [labels]="doughnutChartLabels"
+                   [chartType]="doughnutChartType"
+                   (chartHover)="chartHovered($event)"
+                   (chartClick)="chartClicked($event)">
+        </canvas>
+    </div>
+</div>
