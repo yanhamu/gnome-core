@@ -1,5 +1,5 @@
 {
-  "name": "vendor_5ed0c944169185c8e17c",
+  "name": "vendor_1a0558636d653c8769a0",
   "content": {
     "./node_modules/@angular/core/bundles/core.umd.js": {
       "id": 0,
@@ -161,408 +161,416 @@
       "id": 43,
       "meta": {}
     },
-    "./node_modules/parse5/lib/common/foreign_content.js": {
+    "./node_modules/css-loader/lib/css-base.js": {
       "id": 44,
       "meta": {}
     },
-    "./node_modules/parse5/lib/parser/index.js": {
+    "./node_modules/parse5/lib/common/foreign_content.js": {
       "id": 45,
       "meta": {}
     },
-    "./node_modules/parse5/lib/parser/open_element_stack.js": {
+    "./node_modules/parse5/lib/parser/index.js": {
       "id": 46,
       "meta": {}
     },
-    "./node_modules/parse5/lib/serializer/index.js": {
+    "./node_modules/parse5/lib/parser/open_element_stack.js": {
       "id": 47,
       "meta": {}
     },
-    "./node_modules/rxjs/Observer.js": {
+    "./node_modules/parse5/lib/serializer/index.js": {
       "id": 48,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/ArrayObservable.js": {
+    "./node_modules/rxjs/Observer.js": {
       "id": 49,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/EmptyObservable.js": {
+    "./node_modules/rxjs/observable/ArrayObservable.js": {
       "id": 50,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/PromiseObservable.js": {
+    "./node_modules/rxjs/observable/EmptyObservable.js": {
       "id": 51,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/ScalarObservable.js": {
+    "./node_modules/rxjs/observable/PromiseObservable.js": {
       "id": 52,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/map.js": {
+    "./node_modules/rxjs/observable/ScalarObservable.js": {
       "id": 53,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/mergeAll.js": {
+    "./node_modules/rxjs/operator/map.js": {
       "id": 54,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/mergeMap.js": {
+    "./node_modules/rxjs/operator/mergeAll.js": {
       "id": 55,
       "meta": {}
     },
-    "./node_modules/rxjs/util/ObjectUnsubscribedError.js": {
+    "./node_modules/rxjs/operator/mergeMap.js": {
       "id": 56,
       "meta": {}
     },
-    "./node_modules/rxjs/util/errorObject.js": {
+    "./node_modules/rxjs/util/ObjectUnsubscribedError.js": {
       "id": 57,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isArray.js": {
+    "./node_modules/rxjs/util/errorObject.js": {
       "id": 58,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isArrayLike.js": {
+    "./node_modules/rxjs/util/isArray.js": {
       "id": 59,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isFunction.js": {
+    "./node_modules/rxjs/util/isArrayLike.js": {
       "id": 60,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isObject.js": {
+    "./node_modules/rxjs/util/isFunction.js": {
       "id": 61,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isPromise.js": {
+    "./node_modules/rxjs/util/isObject.js": {
       "id": 62,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot": {
+    "./node_modules/rxjs/util/isPromise.js": {
       "id": 63,
       "meta": {}
     },
-    "./node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js": {
-      "id": 66,
+    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot": {
+      "id": 64,
       "meta": {}
     },
-    "./node_modules/@angular/platform-server/bundles/platform-server.umd.js": {
+    "./node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js": {
       "id": 67,
       "meta": {}
     },
-    "./node_modules/@angular/router/bundles/router.umd.js": {
+    "./node_modules/@angular/platform-server/bundles/platform-server.umd.js": {
       "id": 68,
       "meta": {}
     },
-    "./node_modules/angular2-universal-polyfills/node.js": {
+    "./node_modules/@angular/router/bundles/router.umd.js": {
       "id": 69,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node/index.js": {
+    "./node_modules/angular2-universal-polyfills/node.js": {
       "id": 70,
       "meta": {}
     },
-    "./node_modules/aspnet-prerendering/index.js": {
+    "./node_modules/angular2-universal/node/index.js": {
       "id": 71,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/js/npm.js": {
+    "./node_modules/aspnet-prerendering/index.js": {
       "id": 72,
       "meta": {}
     },
-    "./node_modules/event-source-polyfill/eventsource.js": {
+    "./node_modules/bootstrap/dist/js/npm.js": {
       "id": 73,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/css/bootstrap.css": {
+    "./node_modules/event-source-polyfill/eventsource.js": {
       "id": 74,
       "meta": {}
     },
-    "./node_modules/angular2-universal-polyfills/zone-node/index.js": {
+    "./node_modules/bootstrap/dist/css/bootstrap.css": {
       "id": 75,
       "meta": {}
     },
-    "./node_modules/angular2-universal/common/index.js": {
+    "./node_modules/ng2-tree/styles.css": {
       "id": 76,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node/env.js": {
+    "./node_modules/angular2-universal-polyfills/zone-node/index.js": {
       "id": 77,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node/proxy-document.js": {
+    "./node_modules/angular2-universal/common/index.js": {
       "id": 78,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node/universal-module.js": {
+    "./node_modules/angular2-universal/node/env.js": {
       "id": 79,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node_modules/angular2-platform-node/index.js": {
+    "./node_modules/angular2-universal/node/proxy-document.js": {
       "id": 80,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node_modules/angular2-platform-node/node-http.js": {
+    "./node_modules/angular2-universal/node/universal-module.js": {
       "id": 81,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node_modules/angular2-platform-node/node-platform.js": {
+    "./node_modules/angular2-universal/node_modules/angular2-platform-node/index.js": {
       "id": 82,
       "meta": {}
     },
-    "./node_modules/angular2-universal/node_modules/angular2-platform-node/parse5-adapter.js": {
+    "./node_modules/angular2-universal/node_modules/angular2-platform-node/node-http.js": {
       "id": 83,
       "meta": {}
     },
-    "./node_modules/aspnet-prerendering/Prerendering.js": {
+    "./node_modules/angular2-universal/node_modules/angular2-platform-node/node-platform.js": {
       "id": 84,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/affix.js": {
+    "./node_modules/angular2-universal/node_modules/angular2-platform-node/parse5-adapter.js": {
       "id": 85,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/alert.js": {
+    "./node_modules/aspnet-prerendering/Prerendering.js": {
       "id": 86,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/button.js": {
+    "./node_modules/bootstrap/js/affix.js": {
       "id": 87,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/carousel.js": {
+    "./node_modules/bootstrap/js/alert.js": {
       "id": 88,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/collapse.js": {
+    "./node_modules/bootstrap/js/button.js": {
       "id": 89,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/dropdown.js": {
+    "./node_modules/bootstrap/js/carousel.js": {
       "id": 90,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/modal.js": {
+    "./node_modules/bootstrap/js/collapse.js": {
       "id": 91,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/popover.js": {
+    "./node_modules/bootstrap/js/dropdown.js": {
       "id": 92,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/scrollspy.js": {
+    "./node_modules/bootstrap/js/modal.js": {
       "id": 93,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/tab.js": {
+    "./node_modules/bootstrap/js/popover.js": {
       "id": 94,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/tooltip.js": {
+    "./node_modules/bootstrap/js/scrollspy.js": {
       "id": 95,
       "meta": {}
     },
-    "./node_modules/bootstrap/js/transition.js": {
+    "./node_modules/bootstrap/js/tab.js": {
       "id": 96,
       "meta": {}
     },
-    "./node_modules/css-loader/index.js!./node_modules/bootstrap/dist/css/bootstrap.css": {
+    "./node_modules/bootstrap/js/tooltip.js": {
       "id": 97,
       "meta": {}
     },
-    "./node_modules/css-loader/lib/css-base.js": {
+    "./node_modules/bootstrap/js/transition.js": {
       "id": 98,
       "meta": {}
     },
-    "./node_modules/domain-context/lib/index.js": {
+    "./node_modules/css-loader/index.js!./node_modules/bootstrap/dist/css/bootstrap.css": {
       "id": 99,
       "meta": {}
     },
-    "./node_modules/domain-task/main.js": {
+    "./node_modules/css-loader/index.js!./node_modules/ng2-tree/styles.css": {
       "id": 100,
       "meta": {}
     },
-    "./node_modules/js-beautify/js/index.js": {
+    "./node_modules/domain-context/lib/index.js": {
       "id": 101,
       "meta": {}
     },
-    "./node_modules/js-beautify/js/lib/beautify-html.js": {
+    "./node_modules/domain-task/main.js": {
       "id": 102,
       "meta": {}
     },
-    "./node_modules/parse5/lib/location_info/parser_mixin.js": {
+    "./node_modules/js-beautify/js/index.js": {
       "id": 103,
       "meta": {}
     },
-    "./node_modules/parse5/lib/location_info/tokenizer_mixin.js": {
+    "./node_modules/js-beautify/js/lib/beautify-html.js": {
       "id": 104,
       "meta": {}
     },
-    "./node_modules/parse5/lib/parser/formatting_element_list.js": {
+    "./node_modules/parse5/lib/location_info/parser_mixin.js": {
       "id": 105,
       "meta": {}
     },
-    "./node_modules/parse5/lib/parser/stream.js": {
+    "./node_modules/parse5/lib/location_info/tokenizer_mixin.js": {
       "id": 106,
       "meta": {}
     },
-    "./node_modules/parse5/lib/sax/dev_null_stream.js": {
+    "./node_modules/parse5/lib/parser/formatting_element_list.js": {
       "id": 107,
       "meta": {}
     },
-    "./node_modules/parse5/lib/sax/index.js": {
+    "./node_modules/parse5/lib/parser/stream.js": {
       "id": 108,
       "meta": {}
     },
-    "./node_modules/parse5/lib/sax/parser_feedback_simulator.js": {
+    "./node_modules/parse5/lib/sax/dev_null_stream.js": {
       "id": 109,
       "meta": {}
     },
-    "./node_modules/parse5/lib/serializer/stream.js": {
+    "./node_modules/parse5/lib/sax/index.js": {
       "id": 110,
       "meta": {}
     },
-    "./node_modules/parse5/lib/tokenizer/named_entity_trie.js": {
+    "./node_modules/parse5/lib/sax/parser_feedback_simulator.js": {
       "id": 111,
       "meta": {}
     },
-    "./node_modules/parse5/lib/tokenizer/preprocessor.js": {
+    "./node_modules/parse5/lib/serializer/stream.js": {
       "id": 112,
       "meta": {}
     },
-    "./node_modules/parse5/lib/tree_adapters/htmlparser2.js": {
+    "./node_modules/parse5/lib/tokenizer/named_entity_trie.js": {
       "id": 113,
       "meta": {}
     },
-    "./node_modules/preboot/__build/src/browser/preboot_browser.js": {
+    "./node_modules/parse5/lib/tokenizer/preprocessor.js": {
       "id": 114,
       "meta": {}
     },
-    "./node_modules/preboot/__build/src/inline/preboot_inline.js": {
+    "./node_modules/parse5/lib/tree_adapters/htmlparser2.js": {
       "id": 115,
       "meta": {}
     },
-    "./node_modules/preboot/__build/src/node/preboot_node.js": {
+    "./node_modules/preboot/__build/src/browser/preboot_browser.js": {
       "id": 116,
       "meta": {}
     },
-    "./node_modules/reflect-metadata/Reflect.js": {
+    "./node_modules/preboot/__build/src/inline/preboot_inline.js": {
       "id": 117,
       "meta": {}
     },
-    "./node_modules/rxjs/BehaviorSubject.js": {
+    "./node_modules/preboot/__build/src/node/preboot_node.js": {
       "id": 118,
       "meta": {}
     },
-    "./node_modules/rxjs/InnerSubscriber.js": {
+    "./node_modules/reflect-metadata/Reflect.js": {
       "id": 119,
       "meta": {}
     },
-    "./node_modules/rxjs/Notification.js": {
+    "./node_modules/rxjs/BehaviorSubject.js": {
       "id": 120,
       "meta": {}
     },
-    "./node_modules/rxjs/SubjectSubscription.js": {
+    "./node_modules/rxjs/InnerSubscriber.js": {
       "id": 121,
       "meta": {}
     },
-    "./node_modules/rxjs/add/operator/map.js": {
+    "./node_modules/rxjs/Notification.js": {
       "id": 122,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/ArrayLikeObservable.js": {
+    "./node_modules/rxjs/SubjectSubscription.js": {
       "id": 123,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/FromObservable.js": {
+    "./node_modules/rxjs/add/operator/map.js": {
       "id": 124,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/IteratorObservable.js": {
+    "./node_modules/rxjs/observable/ArrayLikeObservable.js": {
       "id": 125,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/from.js": {
+    "./node_modules/rxjs/observable/FromObservable.js": {
       "id": 126,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/fromPromise.js": {
+    "./node_modules/rxjs/observable/IteratorObservable.js": {
       "id": 127,
       "meta": {}
     },
-    "./node_modules/rxjs/observable/of.js": {
+    "./node_modules/rxjs/observable/from.js": {
       "id": 128,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/catch.js": {
+    "./node_modules/rxjs/observable/fromPromise.js": {
       "id": 129,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/concatAll.js": {
+    "./node_modules/rxjs/observable/of.js": {
       "id": 130,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/concatMap.js": {
+    "./node_modules/rxjs/operator/catch.js": {
       "id": 131,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/every.js": {
+    "./node_modules/rxjs/operator/concatAll.js": {
       "id": 132,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/filter.js": {
+    "./node_modules/rxjs/operator/concatMap.js": {
       "id": 133,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/first.js": {
+    "./node_modules/rxjs/operator/every.js": {
       "id": 134,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/last.js": {
+    "./node_modules/rxjs/operator/filter.js": {
       "id": 135,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/observeOn.js": {
+    "./node_modules/rxjs/operator/first.js": {
       "id": 136,
       "meta": {}
     },
-    "./node_modules/rxjs/operator/reduce.js": {
+    "./node_modules/rxjs/operator/last.js": {
       "id": 137,
       "meta": {}
     },
-    "./node_modules/rxjs/util/UnsubscriptionError.js": {
+    "./node_modules/rxjs/operator/observeOn.js": {
       "id": 138,
       "meta": {}
     },
-    "./node_modules/rxjs/util/isScheduler.js": {
+    "./node_modules/rxjs/operator/reduce.js": {
       "id": 139,
       "meta": {}
     },
-    "./node_modules/rxjs/util/toSubscriber.js": {
+    "./node_modules/rxjs/util/UnsubscriptionError.js": {
       "id": 140,
       "meta": {}
     },
-    "./node_modules/rxjs/util/tryCatch.js": {
+    "./node_modules/rxjs/util/isScheduler.js": {
       "id": 141,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg": {
+    "./node_modules/rxjs/util/toSubscriber.js": {
       "id": 142,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf": {
+    "./node_modules/rxjs/util/tryCatch.js": {
       "id": 143,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff": {
+    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg": {
       "id": 144,
       "meta": {}
     },
-    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2": {
+    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf": {
       "id": 145,
       "meta": {}
     },
-    "./node_modules/zone.js/dist/long-stack-trace-zone.js": {
+    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff": {
       "id": 146,
+      "meta": {}
+    },
+    "./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2": {
+      "id": 147,
+      "meta": {}
+    },
+    "./node_modules/zone.js/dist/long-stack-trace-zone.js": {
+      "id": 148,
       "meta": {}
     }
   }
