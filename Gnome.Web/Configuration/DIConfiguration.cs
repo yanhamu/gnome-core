@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Gnome.Web.Configuration
 {
-    public static class DIConfiguration
+    public static class DiConfiguration
     {
         public static IContainer CreateContainer(IServiceCollection services, IConfiguration configuration)
         {

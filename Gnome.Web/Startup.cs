@@ -35,11 +35,17 @@ namespace gnome_core
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            //Add CORS support.
+            // Must be first to avoid OPTIONS issues when calling from Angular/Browser
+            services.AddCors(options =>
+            {
+                options.AddPolicy("gnome", CorsConfiguration.BuildAllReadyOpenCorsPolicy());
+            });
+
             services.AddMvc();
             services.AddDbContext<GnomeDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services
-                .AddIdentity<ApplicationUser, IdentityRole>(opt =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(opt =>
                 {
                     opt.Password.RequireDigit = false;
                     opt.Password.RequiredLength = 3;
@@ -52,13 +58,15 @@ namespace gnome_core
 
             services.AddScoped<UserManager<ApplicationUser>>();
 
-            var container = DIConfiguration.CreateContainer(services, Configuration);
+            var container = DiConfiguration.CreateContainer(services, Configuration);
             return container.Resolve<IServiceProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, GnomeDbContext context)
         {
+            app.UseCors("gnome");
+
             var secretKey = "mysupersecret_secretkey!123";
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
 
@@ -107,6 +115,8 @@ namespace gnome_core
             }
 
             app.UseStaticFiles();
+
+            context.Database.Migrate();
 
             var options = new TokenProviderOptions()
             {
