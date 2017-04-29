@@ -17,5 +17,4 @@ export class ReportComponent {
     public chartHovered(e: any): void {
         console.log(e);
     }
-
 }
