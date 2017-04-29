@@ -3,16 +3,8 @@ import { AuthenticationService } from './../../services/authentication.service';
 
 @Component({
     selector: 'home',
-    templateUrl: './home.component.html',
-    providers: [ AuthenticationService ]
+    templateUrl: './home.component.html'
 })
 export class HomeComponent {
-
-    IsAuthenticated: boolean = false;
-
     constructor(private auth: AuthenticationService) { }
-
-    OnInit() {
-        this.IsAuthenticated = this.auth.IsAuthenticated()
-    }
 }

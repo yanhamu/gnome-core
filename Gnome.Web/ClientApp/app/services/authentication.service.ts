@@ -8,11 +8,13 @@ export class AuthenticationService {
         this.authenticationToken = null;
     }
 
-    getAuthenticationToken(username: string, password: string): string {
+    authenticate(username: string, password: string): string {
+        this.authenticationToken = "ok-token";
+        console.error(this.authenticationToken);
         return null;
     }
 
-    IsAuthenticated(): boolean {
-        return this.authenticationToken == null;
+    isAuthenticated(): boolean {
+        return this.authenticationToken != null;
     }
 }
