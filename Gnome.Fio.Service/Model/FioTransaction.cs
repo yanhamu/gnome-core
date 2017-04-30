@@ -4,6 +4,7 @@ namespace Gnome.Fio.Service.Model
 {
     public class FioTransaction
     {
+        public Guid AccountId { get; set; }
         public decimal Amount { get; set; }
         public string Description { get; set; }
         public DateTime MovementDate { get; set; }

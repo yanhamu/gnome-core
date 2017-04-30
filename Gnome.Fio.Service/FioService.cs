@@ -1,33 +1,47 @@
-﻿using Gnome.Fio.Service.Client;
+﻿using Gnome.Fio.Service.DataAccess;
 using Gnome.Fio.Service.Model;
+using Gnome.Fio.Service.Services;
 using System.Threading.Tasks;
 
 namespace Gnome.Fio.Service
 {
     public class FioService
     {
-        private readonly IFioClient fioClient;
-        private readonly IGnomeClient gnomeClient;
         private readonly FioTransactionFactory transactionFactory;
+        private readonly FioDownloader fioDownloader;
+        private readonly IDocumentHandler documentHandler;
+        private readonly ITransactionParser transactionParser;
+        private readonly IMessaging messaging;
 
         public FioService(
-            IFioClient fioClient,
-            IGnomeClient gnomeClient,
-            FioTransactionFactory transactionFactory)
+            FioTransactionFactory transactionFactory,
+            FioDownloader fioDownloader,
+            IDocumentHandler documentHandler,
+            ITransactionParser transactionParser,
+            IMessaging messaging)
         {
-            this.fioClient = fioClient;
-            this.gnomeClient = gnomeClient;
             this.transactionFactory = transactionFactory;
+            this.fioDownloader = fioDownloader;
+            this.documentHandler = documentHandler;
+            this.transactionParser = transactionParser;
+            this.messaging = messaging;
         }
 
         public async Task Synchronize(TransactionSyncCommand command)
         {
-            var result = await fioClient.GetAccountStatementAsync(command.Token, command.From, command.To);
-
-            foreach (var transaction in result.TransactionList)
+            var documentId = await fioDownloader.Download(command.Token, command.From, command.To);
+            using (var document = await documentHandler.Load(documentId))
             {
-                var fioTransaction = transactionFactory.Create(transaction);
-                gnomeClient.Send(fioTransaction, command.AccountId);
+                var result = transactionParser.Parse(document);
+
+                foreach (var transaction in result.TransactionList)
+                {
+                    var fioTransaction = transactionFactory.Create(transaction, command.AccountId);
+                    messaging.Send(fioTransaction);
+                }
+
+                var downloadStatus = DownloadStatus.CreateOk(command.AccountId, documentId);
+                messaging.Send(downloadStatus);
             }
         }
     }
