@@ -1,10 +1,11 @@
 ﻿using Gnome.Fio.Service.Model;
+using System;
 
 namespace Gnome.Fio.Service.DataAccess
 {
     public interface IMessaging
     {
-        void Send(FioTransaction fioTransaction);
         void Send(DownloadStatus downloadStatus);
+        void Send(FioTransaction transaction, Guid accountId);
     }
 }

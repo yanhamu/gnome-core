@@ -6,13 +6,35 @@ namespace Gnome.Fio.Service.Model
     {
         public Status Status { get; private set; }
         public DateTime Date { get; private set; }
+        public Guid AccountId { get; private set; }
+        public Guid? DocumentId { get; private set; }
 
         public static DownloadStatus CreateOk(Guid accountId, Guid documentId)
         {
-            var d = new DownloadStatus();
-            d.Status = Status.Ok;
-            d.Date = DateTime.UtcNow;
-            return d;
+            return new DownloadStatus(accountId)
+            {
+                Status = Status.Ok,
+            };
+        }
+
+        public static DownloadStatus CreateError(Guid accountId, Guid documentId)
+        {
+            return new DownloadStatus(accountId)
+            {
+                Status = Status.Error,
+                DocumentId = documentId
+            };
+        }
+
+        public static DownloadStatus CreateError(Guid accountId)
+        {
+            return new DownloadStatus(accountId);
+        }
+
+        private DownloadStatus(Guid accountId)
+        {
+            AccountId = accountId;
+            Date = DateTime.UtcNow;
         }
     }
 
