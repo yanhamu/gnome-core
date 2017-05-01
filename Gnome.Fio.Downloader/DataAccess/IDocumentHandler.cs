@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Gnome.Fio.Service.DataAccess
+namespace Gnome.Fio.Downloader.DataAccess
 {
     public interface IDocumentHandler
     {

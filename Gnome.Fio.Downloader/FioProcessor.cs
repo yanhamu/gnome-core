@@ -1,6 +1,6 @@
-﻿using Gnome.Fio.Downloader.Services;
-using Gnome.Fio.Service.DataAccess;
-using Gnome.Fio.Service.Model;
+﻿using Gnome.Fio.Downloader.DataAccess;
+using Gnome.Fio.Downloader.Model;
+using Gnome.Fio.Downloader.Services;
 using System;
 using System.Threading.Tasks;
 

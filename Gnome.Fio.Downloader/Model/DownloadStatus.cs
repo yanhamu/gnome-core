@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gnome.Fio.Service.Model
+namespace Gnome.Fio.Downloader.Model
 {
     public class DownloadStatus
     {

@@ -1,8 +1,8 @@
-﻿using Gnome.Fio.Service.Model;
+﻿using Gnome.Fio.Downloader.Model;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Gnome.Fio.Service.Services
+namespace Gnome.Fio.Downloader.Services
 {
     public interface ITransactionParser
     {

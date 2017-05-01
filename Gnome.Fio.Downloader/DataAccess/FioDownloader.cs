@@ -2,14 +2,14 @@
 using System.Globalization;
 using System.Threading.Tasks;
 
-namespace Gnome.Fio.Service.DataAccess
+namespace Gnome.Fio.Downloader.DataAccess
 {
     public class FioDownloader
     {
         private readonly string baseUrl;
-        private readonly TransactionsDownloader downloader;
+        private readonly ITransactionsDownloader downloader;
 
-        public FioDownloader(string baseUrl, string documentStorageUrl, TransactionsDownloader downloader)
+        public FioDownloader(string baseUrl, ITransactionsDownloader downloader)
         {
             this.baseUrl = baseUrl;
             this.downloader = downloader;

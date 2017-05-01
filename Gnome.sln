@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.DataAccess", "Gnome.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Services", "Gnome.Services\Gnome.Services.csproj", "{5E4AC61D-D202-4213-B0A1-8A32235D727C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Fio.Downloader", "Gnome.Fio.Service\Gnome.Fio.Downloader.csproj", "{4AA9CCE1-6139-488B-A308-D59641B5F7E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD733BD3-7724-497D-8F1C-A8CFD0431878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Fio.Downloader.Tests", "Gnome.Fio.Downloader.Tests\Gnome.Fio.Downloader.Tests.csproj", "{FCC81728-5841-475F-8417-ABB4BB38D527}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gnome.Fio.Downloader", "Gnome.Fio.Downloader\Gnome.Fio.Downloader.csproj", "{A225D560-C403-4C4D-9D7E-99A9A3B7A185}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +33,19 @@ Global
 		{5E4AC61D-D202-4213-B0A1-8A32235D727C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E4AC61D-D202-4213-B0A1-8A32235D727C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E4AC61D-D202-4213-B0A1-8A32235D727C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AA9CCE1-6139-488B-A308-D59641B5F7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AA9CCE1-6139-488B-A308-D59641B5F7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AA9CCE1-6139-488B-A308-D59641B5F7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AA9CCE1-6139-488B-A308-D59641B5F7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC81728-5841-475F-8417-ABB4BB38D527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC81728-5841-475F-8417-ABB4BB38D527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC81728-5841-475F-8417-ABB4BB38D527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC81728-5841-475F-8417-ABB4BB38D527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A225D560-C403-4C4D-9D7E-99A9A3B7A185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A225D560-C403-4C4D-9D7E-99A9A3B7A185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A225D560-C403-4C4D-9D7E-99A9A3B7A185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A225D560-C403-4C4D-9D7E-99A9A3B7A185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCC81728-5841-475F-8417-ABB4BB38D527} = {DD733BD3-7724-497D-8F1C-A8CFD0431878}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,4 @@
-﻿using Gnome.Fio.Service.DataAccess;
-using Gnome.Fio.Service.Model;
-using Gnome.Fio.Service.Services;
+﻿using Gnome.Fio.Downloader.DataAccess;
 using System;
 using System.Threading.Tasks;
 

@@ -2,9 +2,9 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Gnome.Fio.Service.DataAccess
+namespace Gnome.Fio.Downloader.DataAccess
 {
-    public class TransactionsDownloader
+    public class TransactionsDownloader : ITransactionsDownloader
     {
         private readonly IDocumentHandler documentHandler;
 

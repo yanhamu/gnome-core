@@ -1,7 +1,7 @@
-﻿using Gnome.Fio.Service.Model;
+﻿using Gnome.Fio.Downloader.Model;
 using System;
 
-namespace Gnome.Fio.Service.DataAccess
+namespace Gnome.Fio.Downloader.DataAccess
 {
     public interface IMessaging
     {
