@@ -105,7 +105,7 @@ public class AccountStatementTransaction
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_22
+public partial class AccountStatementTransactionColumn_22 : IValue<string>
 {
 
     private string nameField;
@@ -157,7 +157,7 @@ public partial class AccountStatementTransactionColumn_22
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_0
+public partial class AccountStatementTransactionColumn_0 : IValue<System.DateTime>
 {
 
     private string nameField;
@@ -208,7 +208,7 @@ public partial class AccountStatementTransactionColumn_0
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_1
+public partial class AccountStatementTransactionColumn_1 : IValue<decimal>
 {
 
     private string nameField;
@@ -260,7 +260,7 @@ public partial class AccountStatementTransactionColumn_1
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_14
+public partial class AccountStatementTransactionColumn_14 : IValue<string>
 {
 
     private string nameField;
@@ -312,7 +312,7 @@ public partial class AccountStatementTransactionColumn_14
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_2
+public partial class AccountStatementTransactionColumn_2 : IValue<string>
 {
 
     private string nameField;
@@ -364,7 +364,7 @@ public partial class AccountStatementTransactionColumn_2
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_10
+public partial class AccountStatementTransactionColumn_10 : IValue<string>
 {
 
     private string nameField;
@@ -416,7 +416,7 @@ public partial class AccountStatementTransactionColumn_10
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_3
+public partial class AccountStatementTransactionColumn_3 : IValue<string>
 {
 
     private string nameField;
@@ -468,7 +468,7 @@ public partial class AccountStatementTransactionColumn_3
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_12
+public partial class AccountStatementTransactionColumn_12 : IValue<string>
 {
 
     private string nameField;
@@ -520,7 +520,7 @@ public partial class AccountStatementTransactionColumn_12
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_4
+public partial class AccountStatementTransactionColumn_4 : IValue<string>
 {
 
     private string nameField;
@@ -574,7 +574,7 @@ public partial class AccountStatementTransactionColumn_4
 //[System.Diagnostics.DebuggerStepThroughAttribute()]
 //[System.ComponentModel.DesignerCategoryAttribute("code")]
 //[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_5
+public partial class AccountStatementTransactionColumn_5 : IValue<string>
 {
 
     private string nameField;
@@ -626,7 +626,7 @@ public partial class AccountStatementTransactionColumn_5
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_6
+public partial class AccountStatementTransactionColumn_6 : IValue<string>
 {
 
     private string nameField;
@@ -678,7 +678,7 @@ public partial class AccountStatementTransactionColumn_6
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_7
+public partial class AccountStatementTransactionColumn_7 : IValue<string>
 {
 
     private string nameField;
@@ -732,7 +732,7 @@ public partial class AccountStatementTransactionColumn_7
 //[System.Diagnostics.DebuggerStepThroughAttribute()]
 //[System.ComponentModel.DesignerCategoryAttribute("code")]
 //[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public class AccountStatementTransactionColumn_16
+public class AccountStatementTransactionColumn_16 : IValue<string>
 {
     [XmlAttribute]
     public string name { get; set; }
@@ -747,9 +747,8 @@ public class AccountStatementTransactionColumn_16
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_8
+public partial class AccountStatementTransactionColumn_8 : IValue<string>
 {
-
     private string nameField;
 
     private string idField;
@@ -801,7 +800,7 @@ public partial class AccountStatementTransactionColumn_8
 //[System.Diagnostics.DebuggerStepThroughAttribute()]
 //[System.ComponentModel.DesignerCategoryAttribute("code")]
 //[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public class AccountStatementTransactionColumn_9
+public class AccountStatementTransactionColumn_9 : IValue<string>
 {
     [XmlAttribute]
     public string name { get; set; }
@@ -816,7 +815,7 @@ public class AccountStatementTransactionColumn_9
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_18
+public partial class AccountStatementTransactionColumn_18 : IValue<string>
 {
 
     private string nameField;
@@ -868,7 +867,7 @@ public partial class AccountStatementTransactionColumn_18
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_25
+public partial class AccountStatementTransactionColumn_25 : IValue<string>
 {
 
     private string nameField;
@@ -920,7 +919,7 @@ public partial class AccountStatementTransactionColumn_25
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_26
+public partial class AccountStatementTransactionColumn_26 : IValue<string>
 {
 
     private string nameField;
@@ -972,7 +971,7 @@ public partial class AccountStatementTransactionColumn_26
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.18020")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.fio.cz/IBSchema")]
-public partial class AccountStatementTransactionColumn_17
+public partial class AccountStatementTransactionColumn_17 : IValue<long>
 {
 
     private string nameField;
@@ -1019,4 +1018,9 @@ public partial class AccountStatementTransactionColumn_17
             this.valueField = value;
         }
     }
+}
+
+public interface IValue<T>
+{
+    T Value { get; }
 }

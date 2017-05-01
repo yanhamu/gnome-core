@@ -24,8 +24,8 @@ namespace Gnome.Fio.Downloader.Tests.Services
 
             await service.Process(accountId, documentId);
 
-            messaging.Received().Send(Arg.Is<FioTransaction>(p => p.MovementId == 7706841329L), accountId);
-            messaging.Received().Send(Arg.Is<FioTransaction>(p => p.MovementId == 13845191074L), accountId);
+            messaging.Received().Send(Arg.Is<FioTransaction>(p => p.MovementId == "7706841329"), accountId);
+            messaging.Received().Send(Arg.Is<FioTransaction>(p => p.MovementId == "13845191074"), accountId);
         }
     }
 }

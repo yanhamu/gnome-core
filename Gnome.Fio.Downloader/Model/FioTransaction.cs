@@ -5,13 +5,13 @@ namespace Gnome.Fio.Downloader.Model
     public class FioTransaction
     {
         public decimal Amount { get; set; }
-        public string Description { get; set; }
+
         public DateTime MovementDate { get; set; }
 
         /// <summary>
         /// ID pohybu
         /// </summary>
-        public long MovementId { get; set; }
+        public string MovementId { get; set; }
 
         /// <summary>
         /// Měna
@@ -41,17 +41,17 @@ namespace Gnome.Fio.Downloader.Model
         /// <summary>
         /// KS
         /// </summary>
-        public int? ConstantSymbol { get; set; }
+        public string ConstantSymbol { get; set; }
 
         /// <summary>
         /// VS
         /// </summary>
-        public long? VariableSymbol { get; set; }
+        public string VariableSymbol { get; set; }
 
         /// <summary>
         /// SS
         /// </summary>
-        public long? SpecificSymbol { get; set; }
+        public string SpecificSymbol { get; set; }
 
         /// <summary>
         /// Uživatelská identifikace
@@ -91,6 +91,6 @@ namespace Gnome.Fio.Downloader.Model
         /// <summary>
         /// ID Pokynu
         /// </summary>
-        public long? TransactionId { get; set; }
+        public long TransactionId { get; set; }
     }
 }

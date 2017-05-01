@@ -19,14 +19,14 @@ namespace Gnome.Fio.Downloader.Tests.Services
 
             var transaction = transactionParser.Parse(document).ToList().First();
 
-            Assert.Equal(13845191074, transaction.MovementId);
+            Assert.Equal("13845191074", transaction.MovementId);
             Assert.Equal(new DateTime(2016, 11, 12), transaction.MovementDate);
             Assert.Equal(-10500m, transaction.Amount);
             Assert.Equal("CZK", transaction.Currency);
             Assert.Equal("2111242001", transaction.ContraAccount);
             Assert.Equal("5500", transaction.ContraAccountBankCode);
             Assert.Equal("Raiffeisenbank a.s.", transaction.ContraAccountBankName);
-            Assert.Equal(558, transaction.ConstantSymbol.Value);
+            Assert.Equal("0558", transaction.ConstantSymbol);
             Assert.Equal("najom", transaction.UserIdentification);
             Assert.Equal("Bezhotovostní platba", transaction.TransactionType);
             Assert.Equal("Kriška, Tomáš", transaction.TransactionExecutive);
