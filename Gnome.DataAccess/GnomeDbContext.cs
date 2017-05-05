@@ -9,13 +9,19 @@ namespace Gnome.DataAccess
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Account>().HasKey(p => p.Id);
-            builder.Entity<Account>().Property(p => p.Id).ValueGeneratedNever();
+            Map<Account>(builder);
+            Map<Transaction>(builder);
 
             base.OnModelCreating(builder);
         }
 
-        public DbSet<Account> Accounts { get; set; }
+        private void Map<T>(ModelBuilder builder)
+            where T : class, IEntity<T>, new()
+        {
+            new T().Map(builder.Entity<T>());
+        }
 
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
     }
 }

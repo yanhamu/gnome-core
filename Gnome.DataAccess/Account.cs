@@ -10,7 +10,6 @@ namespace Gnome.DataAccess
         public string OwnerId { get; set; }
         public ApplicationUser Owner { get; set; }
 
-
         public void Map(EntityTypeBuilder<Account> entity)
         {
             entity.HasKey(p => p.Id);

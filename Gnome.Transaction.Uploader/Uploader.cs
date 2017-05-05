@@ -41,26 +41,24 @@ namespace Gnome.Transaction.Uploader
         {
             var factory = new ConnectionFactory() { HostName = hostName };
             using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
             {
-                using (var channel = connection.CreateModel())
-                {
-                    channel.QueueDeclare(
-                        queue: queue,
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null);
+                channel.QueueDeclare(
+                    queue: queue,
+                    durable: false,
+                    exclusive: false,
+                    autoDelete: false,
+                    arguments: null);
 
-                    var consumer = new EventingBasicConsumer(channel);
-                    consumer.Received += MessageReceived;
+                var consumer = new EventingBasicConsumer(channel);
+                consumer.Received += MessageReceived;
 
-                    channel.BasicConsume(queue: queue,
-                        noAck: true,
-                        consumer: consumer);
+                channel.BasicConsume(queue: queue,
+                    noAck: true,
+                    consumer: consumer);
 
-                    Console.WriteLine("Press [enter] to exit");
-                    Console.ReadLine();
-                }
+                Console.WriteLine("Press [enter] to exit");
+                Console.ReadLine();
             }
         }
 

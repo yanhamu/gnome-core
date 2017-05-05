@@ -2,7 +2,8 @@
 
 namespace Gnome.DataAccess
 {
-    public interface IEntity<TEntity> where TEntity : class
+    public interface IEntity<TEntity>
+        where TEntity : class, new()
     {
         void Map(EntityTypeBuilder<TEntity> entity);
     }
