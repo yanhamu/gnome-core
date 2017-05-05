@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gnome.Fio.Downloader\Gnome.Fio.Downloader.csproj" />
+    <ProjectReference Include="..\Gnome.Fio.Downloader\Gnome.Transactions.Fio.Downloader.csproj" />
   </ItemGroup>
 
   <ItemGroup>

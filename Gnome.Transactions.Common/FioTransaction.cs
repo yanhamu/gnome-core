@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gnome.Fio.Downloader.Model
+namespace Gnome.Transactions.Common
 {
     public class FioTransaction
     {

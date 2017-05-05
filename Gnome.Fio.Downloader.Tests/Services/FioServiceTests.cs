@@ -1,6 +1,6 @@
 ﻿using Gnome.Fio.Downloader.DataAccess;
-using Gnome.Fio.Downloader.Model;
 using Gnome.Fio.Downloader.Services;
+using Gnome.Transactions.Common;
 using NSubstitute;
 using System;
 using System.IO;
