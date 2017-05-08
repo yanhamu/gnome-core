@@ -1,8 +1,10 @@
 ﻿using Gnome.DataAccess;
 using Gnome.Services;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Gnome.Web.Controllers
 {
@@ -11,21 +13,23 @@ namespace Gnome.Web.Controllers
     public class AccountController : Controller
     {
         private readonly GnomeDbContext context;
-        private readonly IRandomService service;
+        private readonly IMediator mediator;
 
-        public AccountController(GnomeDbContext context, IRandomService service)
+        public AccountController(GnomeDbContext context, IMediator mediator)
         {
             this.context = context;
-            this.service = service;
+            this.mediator = mediator;
         }
 
         [AllowAnonymous]
         [HttpGet()]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             var count = context.Accounts.ToList().Count;
 
-            return new OkObjectResult(new { data = count.ToString() + "random data" + service.GetRandom().ToString() });
+            var result = await mediator.Send(new RandomCommand());
+
+            return new OkObjectResult(new { data = count.ToString() + " random data " + result });
         }
     }
 }

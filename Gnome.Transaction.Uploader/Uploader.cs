@@ -25,7 +25,8 @@ namespace Gnome.Transaction.Uploader
         public static void Main()
         {
             var loggerFactory = new LoggerFactory();
-            var logger = loggerFactory.CreateLogger<Uploader>();
+            var logger = loggerFactory
+                .CreateLogger<Uploader>();
 
             try
             {
@@ -54,7 +55,7 @@ namespace Gnome.Transaction.Uploader
                 consumer.Received += MessageReceived;
 
                 channel.BasicConsume(queue: queue,
-                    noAck: true,
+                    noAck: true, //TODO should be false
                     consumer: consumer);
 
                 Console.WriteLine("Press [enter] to exit");
