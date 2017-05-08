@@ -1,4 +1,4 @@
-﻿using Gnome.Services;
+﻿using Gnome.Services.Account;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,13 +20,10 @@ namespace Gnome.Web.Controllers
         [HttpGet()]
         public async Task<IActionResult> Get()
         {
-            var result = await mediator.Send(new RandomCommand());
-            var user = this.HttpContext.User;
+            var userId = HttpContext.User.FindFirst("user_id").Value;
+            var result = await mediator.Send(new GetAccountsCommand(userId));
 
-            var claim = user.FindFirst("user_id");
-            var userId = claim.Value;
-
-            return new OkObjectResult($"random data {result} + user id:{userId}");
+            return new OkObjectResult(result);
         }
     }
 }

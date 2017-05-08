@@ -8,4 +8,9 @@
     <PackageReference Include="MediatR" Version="3.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Gnome.Api.Model\Gnome.Api.Model.csproj" />
+    <ProjectReference Include="..\Gnome.DataAccess\Gnome.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
