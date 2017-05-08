@@ -25,5 +25,16 @@ namespace Gnome.Web.Controllers
 
             return new OkObjectResult(result);
         }
+
+        [HttpPost()]
+        public async Task<IActionResult> Create([FromBody]CreateAccountCommand createAccount)
+        {
+            var userId = HttpContext.User.FindFirst("user_id").Value;
+
+            createAccount.OwnerId = userId;
+            var result = await mediator.Send(createAccount);
+
+            return new OkObjectResult(result);
+        }
     }
 }

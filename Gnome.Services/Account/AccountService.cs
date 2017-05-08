@@ -1,10 +1,13 @@
 ﻿using Gnome.DataAccess;
 using MediatR;
+using System;
 using System.Linq;
 
 namespace Gnome.Services.Account
 {
-    public class AccountService : IRequestHandler<GetAccountsCommand, GetAccountsResponse>
+    public class AccountService : 
+        IRequestHandler<GetAccountsCommand, GetAccountsResponse>,
+        IRequestHandler<CreateAccountCommand, CreateAccountResponse>
     {
         private readonly GnomeDbContext context;
 
@@ -25,6 +28,24 @@ namespace Gnome.Services.Account
                 });
 
             return new GetAccountsResponse() { Accounts = accounts };
+        }
+
+        public CreateAccountResponse Handle(CreateAccountCommand message)
+        {
+            var account = new Gnome.DataAccess.Account()
+            {
+                Id = Guid.NewGuid(),
+                Name = message.Name,
+                OwnerId = message.OwnerId
+            };
+            context.Accounts.Add(account);
+            context.SaveChanges();
+
+            return new CreateAccountResponse(new Api.Model.Account()
+            {
+                Id = account.Id,
+                Name = account.Name
+            });
         }
     }
 }
