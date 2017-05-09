@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Gnome.Services.Transaction
 {
-    public class GetTransactionHandler : IRequestHandler<GetTransactionsCommand, GetTransactionResponse>
+    public class GetTransactionHandler : IRequestHandler<GetTransactions, GetTransactionResponse>
     {
         private readonly GnomeDbContext context;
 
@@ -13,13 +13,13 @@ namespace Gnome.Services.Transaction
             this.context = context;
         }
 
-        public GetTransactionResponse Handle(GetTransactionsCommand message)
+        public GetTransactionResponse Handle(GetTransactions message)
         {
             var transactions = context
                 .Transactions
                 .Where(t => t.AccountId == message.AccountId)
                 .ToList()
-                .Select(t => new Api.Model.Transaction()
+                .Select(t => new Api.Model.FioTransaction()
                 {
                     Id = t.Id,
                     Amount = t.Amount,

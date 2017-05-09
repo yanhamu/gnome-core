@@ -2,7 +2,7 @@
 
 namespace Gnome.Api.Model
 {
-    public class Transaction
+    public class FioTransaction
     {
         public Guid Id { get; set; }
         public decimal Amount { get; set; }
