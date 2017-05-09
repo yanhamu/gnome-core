@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Gnome.Api.Model;
 using Gnome.DataAccess;
 using MediatR;
 
