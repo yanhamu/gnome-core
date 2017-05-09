@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.0.2" />
     <PackageReference Include="MediatR" Version="3.0.1" />
   </ItemGroup>
 

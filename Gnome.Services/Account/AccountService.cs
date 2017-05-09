@@ -6,17 +6,17 @@ using System.Linq;
 namespace Gnome.Services.Account
 {
     public class AccountService :
-        IRequestHandler<GetAccountsCommand, GetAccountsResponse>,
-        IRequestHandler<CreateAccountCommand, CreateAccountResponse>,
-        IRequestHandler<RemoveAccountCommand>
+        IRequestHandler<GetAccounts, GetAccountsResponse>,
+        IRequestHandler<CreateAccount, CreateAccountResponse>,
+        IRequestHandler<RemoveAccount>
     {
         private readonly GnomeDbContext context;
 
-        public AccountService(DataAccess.GnomeDbContext context)
+        public AccountService(GnomeDbContext context)
         {
             this.context = context;
         }
-        public GetAccountsResponse Handle(GetAccountsCommand message)
+        public GetAccountsResponse Handle(GetAccounts message)
         {
             var accounts = context
                 .Accounts
@@ -31,7 +31,7 @@ namespace Gnome.Services.Account
             return new GetAccountsResponse() { Accounts = accounts };
         }
 
-        public CreateAccountResponse Handle(CreateAccountCommand message)
+        public CreateAccountResponse Handle(CreateAccount message)
         {
             var account = new DataAccess.Account()
             {
@@ -49,7 +49,7 @@ namespace Gnome.Services.Account
             });
         }
 
-        public void Handle(RemoveAccountCommand message)
+        public void Handle(RemoveAccount message)
         {
             var account = context.Accounts.Find(message.AccountId);
             context.Accounts.Remove(account);

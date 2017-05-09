@@ -22,13 +22,13 @@ namespace Gnome.Web.Controllers
         public async Task<IActionResult> Get()
         {
             var userId = HttpContext.User.FindFirst("user_id").Value;
-            var result = await mediator.Send(new GetAccountsCommand(userId));
+            var result = await mediator.Send(new GetAccounts(userId));
 
             return new OkObjectResult(result);
         }
 
         [HttpPost()]
-        public async Task<IActionResult> Create([FromBody]CreateAccountCommand createAccount)
+        public async Task<IActionResult> Create([FromBody]CreateAccount createAccount)
         {
             var userId = HttpContext.User.FindFirst("user_id").Value;
 
@@ -41,7 +41,7 @@ namespace Gnome.Web.Controllers
         [HttpDelete("{accountId}")]
         public async Task<IActionResult> Remove(Guid accountId)
         {
-            await mediator.Send(new RemoveAccountCommand(accountId));
+            await mediator.Send(new RemoveAccount(accountId));
             return new NoContentResult();
         }
     }

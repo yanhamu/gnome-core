@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Features.Variance;
+using AutoMapper;
 using Gnome.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -12,10 +13,13 @@ namespace Gnome.Web.Configuration
     {
         public static IContainer CreateContainer(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddMediatR(typeof(RandomRequestHandler));
+            services.AddAutoMapper();
+
             var containerBuilder = new ContainerBuilder();
 
             containerBuilder.RegisterSource(new ContravariantRegistrationSource());
-            services.AddMediatR(typeof(RandomRequestHandler));
+            
             containerBuilder.Populate(services);
             return containerBuilder.Build();
         }

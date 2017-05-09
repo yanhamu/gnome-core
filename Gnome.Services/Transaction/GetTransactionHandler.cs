@@ -1,5 +1,7 @@
-﻿using Gnome.DataAccess;
+﻿using AutoMapper;
+using Gnome.DataAccess;
 using MediatR;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Gnome.Services.Transaction
@@ -7,44 +9,26 @@ namespace Gnome.Services.Transaction
     public class GetTransactionHandler : IRequestHandler<GetTransactions, GetTransactionResponse>
     {
         private readonly GnomeDbContext context;
+        private readonly IMapper mapper;
 
-        public GetTransactionHandler(GnomeDbContext context)
+        public GetTransactionHandler(
+            GnomeDbContext context,
+            IMapper mapper)
         {
             this.context = context;
+            this.mapper = mapper;
         }
 
         public GetTransactionResponse Handle(GetTransactions message)
         {
-            var transactions = context
+            var fioTransactions = context
                 .Transactions
                 .Where(t => t.AccountId == message.AccountId)
-                .ToList()
-                .Select(t => new Api.Model.FioTransaction()
-                {
-                    Id = t.Id,
-                    Amount = t.Amount,
-                    Currency = t.Currency,
-                    Comment = t.Comment,
-                    ContraAccount = t.ContraAccount,
-                    ConstantSymbol = t.ConstantSymbol,
-                    ContraAccountName = t.ContraAccountName,
-                    ContraAccountBankCode = t.ContraAccountBankCode,
-                    ContraAccountBankName = t.ContraAccountBankName,
-                    MovementId = t.MovementId,
-                    MovementDate = t.MovementDate,
-                    SpecificSymbol = t.SpecificSymbol,
-                    VariableSymbol = t.VariableSymbol,
-                    UserIdentification = t.UserIdentification,
-                    MessageForReceiver = t.MessageForReceiver,
-                    BankIndentifierCode = t.BankIndentifierCode,
-                    Specification = t.Specification,
-                    TransactionExecutive = t.TransactionExecutive,
-                    TransactionId = t.TransactionId,
-                    TransactionType = t.TransactionType
-
-                })
                 .ToList();
-            return new GetTransactionResponse(transactions);
+
+            var result = mapper.Map<List<Api.Model.FioTransaction>>(fioTransactions);
+
+            return new GetTransactionResponse(result);
         }
     }
 }

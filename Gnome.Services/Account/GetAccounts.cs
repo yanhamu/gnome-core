@@ -2,11 +2,11 @@
 
 namespace Gnome.Services.Account
 {
-    public class GetAccountsCommand : IRequest<GetAccountsResponse>
+    public class GetAccounts : IRequest<GetAccountsResponse>
     {
         public string OwnerId { get; private set; }
 
-        public GetAccountsCommand(string userId)
+        public GetAccounts(string userId)
         {
             this.OwnerId = userId;
         }
