@@ -8,9 +8,10 @@ using Gnome.DataAccess;
 namespace Gnome.DataAccess.Migrations
 {
     [DbContext(typeof(GnomeDbContext))]
-    partial class GnomeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170509173441_AddedTransactions")]
+    partial class AddedTransactions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
