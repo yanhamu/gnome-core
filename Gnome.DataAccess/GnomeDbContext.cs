@@ -22,6 +22,6 @@ namespace Gnome.DataAccess
         }
 
         public DbSet<Account> Accounts { get; set; }
-        public DbSet<FioTransaction> Transactions { get; set; }
+        public DbSet<FioTransaction> FioTransactions { get; set; }
     }
 }

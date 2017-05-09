@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gnome.Web.Controllers
 {
-    [Route("api/account/{accountId:guid}/transactions")]
+    [Route("api/account/{accountId:guid}/fio-transaction")]
     public class FioTransactionController : Controller
     {
         private readonly IMediator mediator;

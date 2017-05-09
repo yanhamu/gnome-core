@@ -22,7 +22,7 @@ namespace Gnome.Services.Transaction
         public GetTransactionResponse Handle(GetTransactions message)
         {
             var fioTransactions = context
-                .Transactions
+                .FioTransactions
                 .Where(t => t.AccountId == message.AccountId)
                 .ToList();
 

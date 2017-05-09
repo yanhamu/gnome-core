@@ -22,7 +22,7 @@ namespace Gnome.Services.Transaction
             var fioTransaction = mapper.Map<DataAccess.FioTransaction>(message.Transaction);
             fioTransaction.AccountId = message.AccountId;
 
-            context.Transactions.Add(fioTransaction);
+            context.FioTransactions.Add(fioTransaction);
             context.SaveChanges();
 
             return mapper.Map<Api.Model.FioTransaction>(fioTransaction);
