@@ -1,4 +1,5 @@
-﻿- add db-connection.json file into Gnome.Web/ root with db connection string:
+﻿- add db-connection.json file into Gnome.Web/ root
+- copy & paste, modify connection string to suit your environment
 ```json 
 {
   "ConnectionStrings": {
