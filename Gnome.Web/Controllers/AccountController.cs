@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace Gnome.Web.Controllers
@@ -35,6 +36,13 @@ namespace Gnome.Web.Controllers
             var result = await mediator.Send(createAccount);
 
             return new OkObjectResult(result);
+        }
+
+        [HttpDelete("{accountId}")]
+        public async Task<IActionResult> Remove(Guid accountId)
+        {
+            await mediator.Send(new RemoveAccountCommand(accountId));
+            return new NoContentResult();
         }
     }
 }

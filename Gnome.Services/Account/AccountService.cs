@@ -5,9 +5,10 @@ using System.Linq;
 
 namespace Gnome.Services.Account
 {
-    public class AccountService : 
+    public class AccountService :
         IRequestHandler<GetAccountsCommand, GetAccountsResponse>,
-        IRequestHandler<CreateAccountCommand, CreateAccountResponse>
+        IRequestHandler<CreateAccountCommand, CreateAccountResponse>,
+        IRequestHandler<RemoveAccountCommand>
     {
         private readonly GnomeDbContext context;
 
@@ -32,7 +33,7 @@ namespace Gnome.Services.Account
 
         public CreateAccountResponse Handle(CreateAccountCommand message)
         {
-            var account = new Gnome.DataAccess.Account()
+            var account = new DataAccess.Account()
             {
                 Id = Guid.NewGuid(),
                 Name = message.Name,
@@ -46,6 +47,13 @@ namespace Gnome.Services.Account
                 Id = account.Id,
                 Name = account.Name
             });
+        }
+
+        public void Handle(RemoveAccountCommand message)
+        {
+            var account = context.Accounts.Find(message.AccountId);
+            context.Accounts.Remove(account);
+            context.SaveChanges();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Gnome.Web.AuthMiddleware
 
         public string Audience { get; set; }
 
-        public TimeSpan Expiration { get; set; } = TimeSpan.FromMinutes(5);
+        public TimeSpan Expiration { get; set; } = TimeSpan.FromDays(7);
 
         public SigningCredentials SigningCredentials { get; set; }
     }
