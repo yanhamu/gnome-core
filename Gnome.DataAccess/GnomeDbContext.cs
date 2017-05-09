@@ -10,7 +10,7 @@ namespace Gnome.DataAccess
         protected override void OnModelCreating(ModelBuilder builder)
         {
             Map<Account>(builder);
-            Map<Transaction>(builder);
+            Map<FioTransaction>(builder);
 
             base.OnModelCreating(builder);
         }
@@ -22,6 +22,6 @@ namespace Gnome.DataAccess
         }
 
         public DbSet<Account> Accounts { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<FioTransaction> Transactions { get; set; }
     }
 }

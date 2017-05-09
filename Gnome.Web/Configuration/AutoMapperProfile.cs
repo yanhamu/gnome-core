@@ -6,7 +6,7 @@ namespace Gnome.Web.Configuration
     {
         public AutoMapperProfile()
         {
-            CreateMap<DataAccess.Transaction, Api.Model.FioTransaction>()
+            CreateMap<DataAccess.FioTransaction, Api.Model.FioTransaction>()
                 .ForMember(d => d.Amount, o => o.MapFrom(s => s.Amount))
                 .ForMember(d => d.BankIndentifierCode, o => o.MapFrom(s => s.BankIndentifierCode))
                 .ForMember(d => d.Comment, o => o.MapFrom(s => s.Comment))

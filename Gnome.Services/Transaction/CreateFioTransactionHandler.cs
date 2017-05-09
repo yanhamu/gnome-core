@@ -5,27 +5,28 @@ using MediatR;
 
 namespace Gnome.Services.Transaction
 {
-    public class CreateFioTransactionHandler : IRequestHandler<CreateFioTransaction, FioTransaction>
+    public class CreateFioTransactionHandler : IRequestHandler<CreateFioTransaction, Api.Model.FioTransaction>
     {
         private readonly GnomeDbContext context;
         private readonly IMapper mapper;
 
-        public CreateFioTransactionHandler(GnomeDbContext context,
+        public CreateFioTransactionHandler(
+            GnomeDbContext context,
             IMapper mapper)
         {
             this.context = context;
             this.mapper = mapper;
         }
 
-        public FioTransaction Handle(CreateFioTransaction message)
+        public Api.Model.FioTransaction Handle(CreateFioTransaction message)
         {
-            var fioTransaction = mapper.Map<DataAccess.Transaction>(message.Transaction);
+            var fioTransaction = mapper.Map<DataAccess.FioTransaction>(message.Transaction);
             fioTransaction.AccountId = message.AccountId;
 
             context.Transactions.Add(fioTransaction);
             context.SaveChanges();
 
-            return mapper.Map<FioTransaction>(fioTransaction);
+            return mapper.Map<Api.Model.FioTransaction>(fioTransaction);
         }
     }
 }
