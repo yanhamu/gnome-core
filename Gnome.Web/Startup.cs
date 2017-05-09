@@ -64,7 +64,12 @@ namespace gnome_core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, GnomeDbContext context)
+        public void Configure(
+            IApplicationBuilder app, 
+            IHostingEnvironment env, 
+            ILoggerFactory loggerFactory, 
+            GnomeDbContext context,
+            UserManager<ApplicationUser> userManager)
         {
             app.UseCors("gnome");
 
@@ -142,6 +147,7 @@ namespace gnome_core
             });
 
             context.Database.EnsureCreated();
+            DatabaseInitializer.DataSeed(userManager, Configuration);
         }
     }
 }
