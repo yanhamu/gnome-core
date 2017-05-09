@@ -27,6 +27,7 @@ namespace gnome_core
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddJsonFile("config.json")
+                .AddJsonFile("db-connection.json")
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
