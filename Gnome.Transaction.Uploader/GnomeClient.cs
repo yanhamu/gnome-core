@@ -8,6 +8,9 @@ namespace Gnome.Transactions.Uploader
     {
         public Task SendAsync(FioTransaction transaction, Guid accountId)
         {
+            //var token = GetToken(username, password);
+            //SendTransaction(transaction, accountId, token)
+
             throw new NotImplementedException();
             //TODO implement
         }
