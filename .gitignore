@@ -245,3 +245,6 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Separate db connection string config
+Gnome.Web/db-connection.json
