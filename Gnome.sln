@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Transactions.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Api.Model", "Gnome.Api.Model\Gnome.Api.Model.csproj", "{F8C5329F-34A4-4C2B-8D59-570165D78FFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gnome.Transactions.Uploader.Tests", "Gnome.Transactions.Uploader.Tests\Gnome.Transactions.Uploader.Tests.csproj", "{4FBA891E-7988-4298-845F-E7D30E7ACD37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{F8C5329F-34A4-4C2B-8D59-570165D78FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C5329F-34A4-4C2B-8D59-570165D78FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C5329F-34A4-4C2B-8D59-570165D78FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBA891E-7988-4298-845F-E7D30E7ACD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBA891E-7988-4298-845F-E7D30E7ACD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBA891E-7988-4298-845F-E7D30E7ACD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBA891E-7988-4298-845F-E7D30E7ACD37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,6 @@ Global
 		{A225D560-C403-4C4D-9D7E-99A9A3B7A185} = {B8E3DCA9-6DAA-4882-9489-64AA949EE169}
 		{F789C4C8-7B12-46BC-96F9-D227A0D6AF9C} = {B8E3DCA9-6DAA-4882-9489-64AA949EE169}
 		{05AF60B9-CB6A-4E71-A6C7-8E848FA6F8F1} = {B8E3DCA9-6DAA-4882-9489-64AA949EE169}
+		{4FBA891E-7988-4298-845F-E7D30E7ACD37} = {DD733BD3-7724-497D-8F1C-A8CFD0431878}
 	EndGlobalSection
 EndGlobal
